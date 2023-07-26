@@ -1,0 +1,30 @@
+{
+    "name": "drewlabs/password-contracts",
+    "description": "Interfaces and Contracts for drewlabs/passwords library",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "passwords",
+        "authentication"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Drewlabs\\Passwords\\Contracts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "azandrew-sidoine",
+            "email": "azandrewdevelopper@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.0|^8.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
