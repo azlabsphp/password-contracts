@@ -15,6 +15,7 @@ namespace Drewlabs\Passwords\Contracts;
 
 interface CanResetPassword
 {
+
     /**
      * return the email, phone number or address for password reset link is sent.
      */
@@ -24,4 +25,13 @@ interface CanResetPassword
      * Return email, phone number or generic addres for otp password reset.
      */
     public function getSubForPasswordResetOtp(): ?string;
+
+    /**
+     * Change the password to the provided `$password` string
+     * 
+     * @param string $password
+     * 
+     * @return string 
+     */
+    public function resetPassword(string $password);
 }
