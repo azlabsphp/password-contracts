@@ -13,16 +13,18 @@ declare(strict_types=1);
 
 namespace Drewlabs\Passwords\Contracts;
 
+use Closure;
+
 interface ConnectionInterface
 {
     /**
      * Select a value matching the conditions variables.
      *
-     * @param string|int $sub
+     * @param string|int|\Closure(QueryBuilder $builder): QueryBuilder $query
      *
-     * @return object
+     * @return mixed
      */
-    public function select($sub);
+    public function select($query);
 
     /**
      * Update value matching the `$conditions` with the `$values` parameter.
