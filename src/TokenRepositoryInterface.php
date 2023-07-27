@@ -38,4 +38,20 @@ interface TokenRepositoryInterface
      * Remove a token from tokens the collection.
      */
     public function deleteToken(string $sub): bool;
+
+    /**
+     * Query hashed token from password reset token string
+     * 
+     * @param string $token
+     * 
+     * @return HashedTokenInterface|null 
+     */
+    public function getByToken(string $token): ?HashedTokenInterface;
+
+    /**
+     * Prune the stale tokens from repository
+     * 
+     * @return void 
+     */
+    public function prune();
 }
