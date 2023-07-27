@@ -15,7 +15,6 @@ namespace Drewlabs\Passwords\Contracts;
 
 interface CanResetPassword
 {
-
     /**
      * return the email, phone number or address for password reset link is sent.
      */
@@ -31,7 +30,7 @@ interface CanResetPassword
      * 
      * @param string $password
      * 
-     * @return string 
+     * @return void 
      */
     public function resetPassword(string $password);
 }
