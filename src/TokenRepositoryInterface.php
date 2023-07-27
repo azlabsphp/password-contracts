@@ -47,11 +47,4 @@ interface TokenRepositoryInterface
      * @return HashedTokenInterface|null 
      */
     public function getByToken(string $token): ?HashedTokenInterface;
-
-    /**
-     * Prune the stale tokens from repository
-     * 
-     * @return void 
-     */
-    public function prune();
 }

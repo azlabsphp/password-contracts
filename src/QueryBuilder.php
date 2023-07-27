@@ -39,7 +39,9 @@ interface QueryBuilder
     /**
      * Generic where query method
      * 
-     * @param string|int $sub 
+     * @param string|array $column 
+     * @param mixed $operator 
+     * @param mixed $value 
      * @return static 
      */
     public function where($column, $operator = null, $value = null);
