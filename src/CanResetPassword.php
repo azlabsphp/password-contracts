@@ -26,11 +26,9 @@ interface CanResetPassword
     public function getSubForPasswordResetOtp(): ?string;
 
     /**
-     * Change the password to the provided `$password` string
-     * 
-     * @param string $password
-     * 
-     * @return void 
+     * Change the password to the provided `$password` string.
+     *
+     * @return void
      */
     public function resetPassword(string $password);
 }

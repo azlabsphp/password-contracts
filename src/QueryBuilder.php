@@ -13,60 +13,57 @@ declare(strict_types=1);
 
 namespace Drewlabs\Passwords\Contracts;
 
-use Drewlabs\Passwords\Contracts\ConnectionInterface;
-
 /**
  * @psalm-template T
  */
 interface QueryBuilder
 {
     /**
-     * Add a filter for the subject column
-     * 
-     * @param string|int $sub 
-     * @return static 
+     * Add a filter for the subject column.
+     *
+     * @param string|int $sub
+     *
+     * @return static
      */
     public function whereSub($sub);
 
     /**
-     * Add a filter for the token column
-     * 
-     * @param string|int $token 
-     * @return static 
+     * Add a filter for the token column.
+     *
+     * @param string|int $token
+     *
+     * @return static
      */
     public function whereToken(string $token);
 
     /**
-     * Generic where query method
-     * 
-     * @param string|array $column 
-     * @param mixed $operator 
-     * @param mixed $value 
-     * @return static 
+     * Generic where query method.
+     *
+     * @param string|array $column
+     * @param mixed        $operator
+     * @param mixed        $value
+     *
+     * @return static
      */
     public function where($column, $operator = null, $value = null);
 
     /**
-     * Return an array of all values matching query
-     * 
-     * @param ConnectionInterface|null $connection 
+     * Return an array of all values matching query.
+     *
      * @return array<T>|array<HashedTokenInterface>
      */
     public function all(ConnectionInterface $connection = null);
 
     /**
-     * Return an iterable of all values matching query
-     * 
-     * @param ConnectionInterface|null $connection 
+     * Return an iterable of all values matching query.
+     *
      * @return \Traversable<T>|Traversable<HashedTokenInterface>
      */
     public function cursor(ConnectionInterface $connection = null);
 
     /**
-     * Returns the first element matching the constructed criteria
-     * 
-     * @param ConnectionInterface|null $connection
-     * 
+     * Returns the first element matching the constructed criteria.
+     *
      * @return T|HashedTokenInterface
      */
     public function first(ConnectionInterface $connection = null);
